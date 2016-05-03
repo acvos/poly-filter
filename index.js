@@ -5,7 +5,11 @@ function filter(func, object) {
 
   for (var i in object) {
     if (func(object[i], i)) {
-      result[i] = object[i]
+      if (result instanceof Array) {
+        result.push(object[i]);
+      } else {
+        result[i] = object[i];
+      }
     }
   }
 
