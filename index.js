@@ -1,15 +1,15 @@
 var curry = require("curry");
 
 function filter(func, object) {
-  var result = (object instanceof Array) ? [] : {};
+  if (object instanceof Array) {
+    return object.filter(func)
+  }
+
+  var result = {};
 
   for (var i in object) {
     if (func(object[i], i)) {
-      if (result instanceof Array) {
-        result.push(object[i]);
-      } else {
-        result[i] = object[i];
-      }
+      result[i] = object[i];
     }
   }
 
