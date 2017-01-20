@@ -2,7 +2,7 @@
   "name": "poly-filter",
   "description": "Polymorphic curried list filter for functional style JS",
   "keywords": "filter, object filter, array filter, list filter, pipeline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/acvos/poly-filter.git"
